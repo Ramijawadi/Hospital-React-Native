@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { StyleSheet } from 'react-native';
-import { PADDING } from '../../outils/constantes';
+import { COLORS, PADDING } from '../../outils/constantes';
 
 const DashboardStyle = StyleSheet.create({
 
@@ -26,31 +26,88 @@ const DashboardStyle = StyleSheet.create({
 
     },
     //styling flat list
+    
     scrollableList: {
         paddingHorizontal: PADDING.horizontal,
         paddingVertical: PADDING.vertical,
 
 
     },
-    scrollableListItem: {
-        flexDirection: 'column',
-        paddingHorizontal: 15,
-        paddingVertical: 15,
-        marginRight: 15,
-        backgroundColor: 'white',
-        elevation: 3,
+
+    title:{
+
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+
     },
 
-    name: {
-      fontWeight:'bold',
-        fontSize: 16,
+
+    title_spacebetween:{
+
+        paddingHorizontal: PADDING.horizontal,
+        paddingVertical: PADDING.vertical,
+       flexDirection:'row',
+       justifyContent:'space-between',
+       marginTop:15,
     },
-    description: {
 
-        marginTop: 3,
-        fontSize: 15,
-    }
+    titleBold:{
+        fontWeight:'bold',
+    },
+ link:{
+    color:COLORS.main,
+ },
+  
 
+ doctorContainer : {
+    marginTop : 15,
+    paddingHorizontal: PADDING.horizontal,
+    paddingVertical: PADDING.vertical,
+
+ },
+
+ doctorCard :{
+
+    flex:1,
+    flexDirection :'row',
+    backgroundColor:'white',
+    elevation:5,
+    padding:10,
+    paddingHorizontal: PADDING.horizontal,
+    paddingVertical: PADDING.vertical,
+    marginBottom:20,
+    borderRadius:10,
+
+ },
+
+ doctorImg: {
+
+    height:80,
+    width:80,
+    borderRadius:80/2,
+    marginRight:15,
+ },
+ doctorInfo :{
+
+    flexDirection:'column',
+ },
+
+ doctorName : {
+
+    fontWeight:'bold',
+    fontSize:16,
+    marginBottom:15,
+
+ },
+ doctorSpec : {
+backgroundColor:COLORS.main,
+color:'white',
+padding:5,
+fontSize:14,
+borderRadius:15,
+paddingHorizontal: PADDING.horizontal,
+
+ },
 });
 
 export default DashboardStyle;
